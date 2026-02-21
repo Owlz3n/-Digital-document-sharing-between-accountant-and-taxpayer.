@@ -1,0 +1,118 @@
+/* File: slide navbar style.css */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Jost', sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.main {
+  width: 350px;
+  height: 500px;
+  background: url("https://images.unsplash.com/photo-1526401485004-46910ecc8e51?auto=format&fit=crop&w=350&q=80") no-repeat center / cover;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+#chk {
+  display: none;
+}
+
+.signup,
+.login {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+label {
+  color: #fff;
+  font-size: 2.3em;
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+input {
+  width: 70%;
+  padding: 12px;
+  display: block;
+  margin: 15px auto;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: #e0dede;
+}
+
+button {
+  width: 70%;
+  height: 45px;
+  margin: 20px auto;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+button:hover {
+  background: #6d44b8;
+}
+
+.login {
+  background: #fff;
+  border-radius: 60% / 10%;
+  transform: translateY(-180px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.login label {
+  color: #573b8a;
+  transform: scale(0.6);
+}
+
+#chk:checked ~ .login {
+  transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label {
+  transform: scale(1);
+}
+
+#chk:checked ~ .signup label {
+  transform: scale(0.6);
+}
+
+/* Responsive tweaks */
+@media (max-width: 400px) {
+  .main {
+    width: 90%;
+    height: 480px;
+  }
+
+  label {
+    font-size: 2em;
+    margin: 30px;
+  }
+
+  button,
+  input {
+    width: 80%;
+  }
+}

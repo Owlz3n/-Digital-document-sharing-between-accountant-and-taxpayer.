@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Kayıt Formu</title>
+  
+  <script src="/_sdk/data_sdk.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+
+  <link rel="stylesheet" href="adminlogincss.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1 class="title" id="form-title">Kayıt Formu</h1>
+      <p class="subtitle" id="form-subtitle">Bilgilerinizi girin ve kayıt olun</p>
+    </div>
+    <form id="kayit-formu">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ad">Ad *</label> 
+          <input type="text" id="ad" name="ad" required>
+
+        <label for="soyad">Soyad *</label> 
+          <input type="text" id="soyad" name="soyad" required>
+
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">E-posta Adresi *</label> 
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sifre">Şifre *</label> 
+        <input type="password" id="sifre" name="sifre" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="telefon">Telefon</label> 
+          <input type="tel" id="telefon" name="telefon" placeholder="0555 123 45 67">
+        </div>
+        <div class="form-group">
+          <label for="sehir">Şehir</label> 
+          <select id="sehir" name="sehir">
+            <option value="">Şehir seçin</option>
+            <option value="İstanbul">İstanbul</option>
+            <option value="Ankara">Ankara</option>
+            <option value="İzmir">İzmir</option>
+            <option value="Bursa">Bursa</option>
+            <option value="Antalya">Antalya</option>
+            <option value="Adana">Adana</option>
+            <option value="Konya">Konya</option>
+            <option value="Gaziantep">Gaziantep</option>
+            <option value="Kayseri">Kayseri</option>
+            <option value="Diğer">Diğer</option>
+          </select>
+        </div>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="haber-bulteni" name="haber-bulteni"> 
+        <label for="haber-bulteni" class="checkbox-label">Haber bülteni ve güncellemeler almak istiyorum</label>
+      </div>
+      <button type="submit" class="submit-btn" id="submit-btn"> 
+        <span id="btn-text">Kayıt Ol</span>
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <span>Kaydediliyor...</span>
+        </div>
+      </button>
+      <div class="success-message" id="success-message">
+        Kayıt başarıyla tamamlandı! Hoş geldiniz.
+      </div>
+      <div class="error-message" id="error-message">
+        Kayıt sırasında bir hata oluştu. Lütfen tekrar deneyin.
+      </div>
+    </form>
+  </div>
+
+  <script src="adminloginjs.js"></script>
+
+</body>
+</html>
